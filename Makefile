@@ -1,5 +1,6 @@
 USER := $(shell whoami)
 GIT_BRANCH := $(shell git rev-parse --abbrev-ref HEAD | sed 's/\//-/g')
+#DOCKER_TAG := $(USER)/$(shell basename $(CURDIR)):$(GIT_BRANCH)
 DOCKER_TAG := $(USER)/$(shell basename $(CURDIR)):$(GIT_BRANCH)
 
 .PHONY: build
